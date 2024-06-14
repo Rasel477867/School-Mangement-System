@@ -1,0 +1,35 @@
+D:\Development\School-Mangement\School Mangement System\SchoolMS.Repository\bin\Debug\net8.0\SchoolMS.Repository.deps.json
+D:\Development\School-Mangement\School Mangement System\SchoolMS.Repository\bin\Debug\net8.0\SchoolMS.Repository.runtimeconfig.json
+D:\Development\School-Mangement\School Mangement System\SchoolMS.Repository\bin\Debug\net8.0\SchoolMS.Repository.dll
+D:\Development\School-Mangement\School Mangement System\SchoolMS.Repository\bin\Debug\net8.0\SchoolMS.Repository.pdb
+D:\Development\School-Mangement\School Mangement System\SchoolMS.Repository\bin\Debug\net8.0\SchoolMS.Core.dll
+D:\Development\School-Mangement\School Mangement System\SchoolMS.Repository\bin\Debug\net8.0\SchoolMS.Core.pdb
+D:\Development\School-Mangement\School Mangement System\SchoolMS.Repository\obj\Debug\net8.0\SchoolMS.Repository.csproj.AssemblyReference.cache
+D:\Development\School-Mangement\School Mangement System\SchoolMS.Repository\obj\Debug\net8.0\SchoolMS.Repository.GeneratedMSBuildEditorConfig.editorconfig
+D:\Development\School-Mangement\School Mangement System\SchoolMS.Repository\obj\Debug\net8.0\SchoolMS.Repository.AssemblyInfoInputs.cache
+D:\Development\School-Mangement\School Mangement System\SchoolMS.Repository\obj\Debug\net8.0\SchoolMS.Repository.AssemblyInfo.cs
+D:\Development\School-Mangement\School Mangement System\SchoolMS.Repository\obj\Debug\net8.0\SchoolMS.Repository.csproj.CoreCompileInputs.cache
+D:\Development\School-Mangement\School Mangement System\SchoolMS.Repository\obj\Debug\net8.0\SchoolMS.Repository.sourcelink.json
+D:\Development\School-Mangement\School Mangement System\SchoolMS.Repository\obj\Debug\net8.0\SchoolMS.Repository.csproj.CopyComplete
+D:\Development\School-Mangement\School Mangement System\SchoolMS.Repository\obj\Debug\net8.0\SchoolMS.Repository.dll
+D:\Development\School-Mangement\School Mangement System\SchoolMS.Repository\obj\Debug\net8.0\refint\SchoolMS.Repository.dll
+D:\Development\School-Mangement\School Mangement System\SchoolMS.Repository\obj\Debug\net8.0\SchoolMS.Repository.pdb
+D:\Development\School-Mangement\School Mangement System\SchoolMS.Repository\obj\Debug\net8.0\SchoolMS.Repository.genruntimeconfig.cache
+D:\Development\School-Mangement\School Mangement System\SchoolMS.Repository\obj\Debug\net8.0\ref\SchoolMS.Repository.dll
+D:\School mangement\School Mangement System\SchoolMS.Repository\bin\Debug\net8.0\SchoolMS.Repository.deps.json
+D:\School mangement\School Mangement System\SchoolMS.Repository\bin\Debug\net8.0\SchoolMS.Repository.runtimeconfig.json
+D:\School mangement\School Mangement System\SchoolMS.Repository\bin\Debug\net8.0\SchoolMS.Repository.dll
+D:\School mangement\School Mangement System\SchoolMS.Repository\bin\Debug\net8.0\SchoolMS.Repository.pdb
+D:\School mangement\School Mangement System\SchoolMS.Repository\bin\Debug\net8.0\SchoolMS.Core.dll
+D:\School mangement\School Mangement System\SchoolMS.Repository\bin\Debug\net8.0\SchoolMS.Core.pdb
+D:\School mangement\School Mangement System\SchoolMS.Repository\obj\Debug\net8.0\SchoolMS.Repository.csproj.AssemblyReference.cache
+D:\School mangement\School Mangement System\SchoolMS.Repository\obj\Debug\net8.0\SchoolMS.Repository.GeneratedMSBuildEditorConfig.editorconfig
+D:\School mangement\School Mangement System\SchoolMS.Repository\obj\Debug\net8.0\SchoolMS.Repository.AssemblyInfoInputs.cache
+D:\School mangement\School Mangement System\SchoolMS.Repository\obj\Debug\net8.0\SchoolMS.Repository.AssemblyInfo.cs
+D:\School mangement\School Mangement System\SchoolMS.Repository\obj\Debug\net8.0\SchoolMS.Repository.csproj.CoreCompileInputs.cache
+D:\School mangement\School Mangement System\SchoolMS.Repository\obj\Debug\net8.0\SchoolMS.Repository.csproj.CopyComplete
+D:\School mangement\School Mangement System\SchoolMS.Repository\obj\Debug\net8.0\SchoolMS.Repository.dll
+D:\School mangement\School Mangement System\SchoolMS.Repository\obj\Debug\net8.0\refint\SchoolMS.Repository.dll
+D:\School mangement\School Mangement System\SchoolMS.Repository\obj\Debug\net8.0\SchoolMS.Repository.pdb
+D:\School mangement\School Mangement System\SchoolMS.Repository\obj\Debug\net8.0\SchoolMS.Repository.genruntimeconfig.cache
+D:\School mangement\School Mangement System\SchoolMS.Repository\obj\Debug\net8.0\ref\SchoolMS.Repository.dll
