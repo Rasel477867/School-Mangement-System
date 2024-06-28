@@ -13,6 +13,8 @@ namespace SchoolMS.Web.ViewModels
             CreateMap<ClassLevelView,ClassLevel>();
             CreateMap<Teacher, TeacherView>();
             CreateMap<TeacherView, Teacher>();
+            CreateMap<StudentView, Student>();
+            CreateMap<Student, StudentView>();
 
 
 

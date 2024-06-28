@@ -67,7 +67,11 @@ namespace SchoolMS.Web.Controllers
         public async Task<IActionResult> Details(int id)
         {
             var model = await _teacherService.GetById(id);
-            return Json(model);
+            if (model != null)
+            {
+                return PartialView("_TeacherDetails", model);
+            }
+            return null;
         }
     }
 }

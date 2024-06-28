@@ -549,3 +549,4 @@ D:\School mangement\School Mangement System\SchoolMS.Web\obj\Debug\net8.0\scoped
 D:\School mangement\School Mangement System\SchoolMS.Web\obj\Debug\net8.0\SchoolMS.Web.csproj.CopyComplete
 D:\School mangement\School Mangement System\SchoolMS.Web\obj\Debug\net8.0\SchoolMS.Web.genruntimeconfig.cache
 D:\School mangement\School Mangement System\SchoolMS.Web\obj\Debug\net8.0\ref\SchoolMS.Web.dll
+D:\School mangement\School Mangement System\SchoolMS.Web\obj\Debug\net8.0\SchoolMS.Web.sourcelink.json

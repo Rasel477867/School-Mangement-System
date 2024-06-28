@@ -27,7 +27,7 @@ namespace SchoolMS.Repository.Core
         public virtual async Task Add(T Entity)
         {
 
-           await  table.AddAsync(Entity);
+          await  table.AddAsync(Entity);
           await _db.SaveChangesAsync();
         }
 

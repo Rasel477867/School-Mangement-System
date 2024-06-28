@@ -10,5 +10,6 @@ namespace SchoolMS.Service.Contacts
 {
     public interface ITeacherService:IService<Teacher>
     {
+        public Task<List<Teacher>> TeacherDetails(int id);
     }
 }

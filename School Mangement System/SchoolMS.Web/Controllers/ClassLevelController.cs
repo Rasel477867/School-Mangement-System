@@ -10,12 +10,16 @@ namespace SchoolMS.Web.Controllers
     public class ClassLevelController : Controller
     {
         private readonly IClassLevelService _classLevelService;
+        private readonly ITeacherService _teacherService;
         private readonly IMapper _mapper;
+        private readonly IStudentService _studentService;
 
-        public ClassLevelController(IClassLevelService classLevelService,IMapper mapper)
+        public ClassLevelController(IClassLevelService classLevelService,IMapper mapper,ITeacherService teacherService, IStudentService studentService)
         {
-                _classLevelService = classLevelService;
+             _classLevelService = classLevelService;
             _mapper = mapper;
+            _teacherService = teacherService;
+            _studentService = studentService;
         }
         public async Task<IActionResult> Index()
         {
@@ -37,6 +41,18 @@ namespace SchoolMS.Web.Controllers
                 return RedirectToAction("Index");
             }
             TempData["Error"] = "Invalid Insert";
+            return View(model);
+        }
+        public async Task<IActionResult> TeacherDetails(int id)
+        {
+            var model=await _teacherService.TeacherDetails(id);
+           
+
+            return View(model);
+        }
+        public async Task<IActionResult>StudentDetails(int id)
+        {
+            var model=await _studentService.Studentdetails(id);
             return View(model);
         }
     }

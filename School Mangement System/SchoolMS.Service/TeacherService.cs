@@ -13,8 +13,15 @@ namespace SchoolMS.Service
 {
     public class TeacherService : Service<Teacher>, ITeacherService
     {
+        private readonly ITeacherRepository _repository;
         public TeacherService(ITeacherRepository repository) : base(repository)
         {
+            _repository = repository;
+        }
+
+        public async Task<List<Teacher>> TeacherDetails(int id)
+        {
+          return await _repository.TeacherDetails(id);
         }
     }
 }

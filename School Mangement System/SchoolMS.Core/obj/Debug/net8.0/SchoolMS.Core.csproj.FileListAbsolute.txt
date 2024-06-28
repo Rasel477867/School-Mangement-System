@@ -41,3 +41,4 @@ D:\School mangement\School Mangement System\SchoolMS.Core\obj\Debug\net8.0\refin
 D:\School mangement\School Mangement System\SchoolMS.Core\obj\Debug\net8.0\SchoolMS.Core.pdb
 D:\School mangement\School Mangement System\SchoolMS.Core\obj\Debug\net8.0\SchoolMS.Core.genruntimeconfig.cache
 D:\School mangement\School Mangement System\SchoolMS.Core\obj\Debug\net8.0\ref\SchoolMS.Core.dll
+D:\School mangement\School Mangement System\SchoolMS.Core\obj\Debug\net8.0\SchoolMS.Core.sourcelink.json

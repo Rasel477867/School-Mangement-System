@@ -37,3 +37,4 @@ D:\School mangement\School Mangement System\SchoolMS.Service\obj\Debug\net8.0\re
 D:\School mangement\School Mangement System\SchoolMS.Service\obj\Debug\net8.0\SchoolMS.Service.pdb
 D:\School mangement\School Mangement System\SchoolMS.Service\obj\Debug\net8.0\SchoolMS.Service.genruntimeconfig.cache
 D:\School mangement\School Mangement System\SchoolMS.Service\obj\Debug\net8.0\ref\SchoolMS.Service.dll
+D:\School mangement\School Mangement System\SchoolMS.Service\obj\Debug\net8.0\SchoolMS.Service.sourcelink.json

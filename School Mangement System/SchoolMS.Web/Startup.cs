@@ -52,10 +52,14 @@ namespace SchoolMS.Web
             builder.Services.AddScoped<ITeacherRepository, TeacherRepository>();
             builder.Services.AddScoped<IDesignationRepository, DesignationRepository>();
             builder.Services.AddScoped<IClassLevelRepository, ClassLevelRepository>();
+            builder.Services.AddScoped<IStudentRepository, StudentRepository>();
+            builder.Services.AddScoped<ISubjectRepository, SubjectRepository>();
 
             builder.Services.AddScoped<ITeacherService,TeacherService>();
             builder.Services.AddScoped<IDesignationService, DesignationService>();
             builder.Services.AddScoped<IClassLevelService, ClassLevelService>();
+            builder.Services.AddScoped<IStudentService, StudentService>();
+            builder.Services.AddScoped<ISubjectService, SubjectService>();
 
        
 

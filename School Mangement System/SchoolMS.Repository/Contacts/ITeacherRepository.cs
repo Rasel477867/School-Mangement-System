@@ -10,5 +10,6 @@ namespace SchoolMS.Repository.Contacts
 {
     public interface ITeacherRepository:IRepository<Teacher>
     {
+        public Task<List<Teacher>> TeacherDetails(int id);
     }
 }

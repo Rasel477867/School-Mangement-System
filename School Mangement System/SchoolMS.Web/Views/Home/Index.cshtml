@@ -4,14 +4,35 @@
 
 <div class="text-center">
     <h1 class="display-4">Welcome</h1>
+
     <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+    <div id="resl">
+
+    </div>
+
+
 </div>
 
 
-@section Scripts {
 
+@section Scripts {
+@* 
     <script type="text/javascript">
         console.log("Hello");
+        console.log("hello duet");
+        function show() {
+            $.ajax({
+                type: "POST",
+                url: "@Url.Action("Details", "Home")",
+                data: { id: 1 },
+                success: function (res) {
+                    $("#resl").html(res);
+                },
+                error: function (res) {
+                    console.log(res);
+                }
+            });
+        } *@
 
 
     </script>

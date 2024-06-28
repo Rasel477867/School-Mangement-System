@@ -76,32 +76,55 @@
 
                 <td>
                     @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
-                    <a href="" onclick="details(@item.Id)"> Details</a>
+                    <a href="javascript:void(0)" onclick="Details(@item.Id)" > Details</a>|
                     @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
                 </td>
             </tr>
         }
     </tbody>
 </table>
-<h1 id="result"></h1>
+
+
+
+<div class="modal" id="modal">
+    <div class="modal-dialog" role="document" >
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Teacher Details</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true"></span>
+                </button>
+            </div>
+            <div class="modal-body" id="result">
+                <p>Modal body text goes here.</p>
+            </div>
+            <div class="modal-footer">
+               
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
 @section Scripts {
 
     <script type="text/javascript">
-        function details(id) {
-            console.log("hello");
-            // $.ajax({
-            //     type: "POST",
-            //     url: "/Teacher/Details",
-            //     data: { id: id },
-            //     success: function (response) {
-            //         $("#result").text = "hello duet";
-            //     },
-            //     error: function (response) {
-            //         console.log(response);
-            //     }
+        function Details(id) {
+            $.ajax({
+                type: "POST",
+                url: "/Teacher/Details",
+                data: { id: id },
+                success: function (response) {
+                    $("#result").html(response);// modal get data pass by div id
+                    $("#modal").modal("show");// modal id pass for show modal
 
+                },
+                error: function (response) {
+                    consol.log(response);
+                }
 
-            // });
+            });
         }
 
 
