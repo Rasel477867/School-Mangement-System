@@ -550,3 +550,4 @@ D:\School mangement\School Mangement System\SchoolMS.Web\obj\Debug\net8.0\School
 D:\School mangement\School Mangement System\SchoolMS.Web\obj\Debug\net8.0\SchoolMS.Web.genruntimeconfig.cache
 D:\School mangement\School Mangement System\SchoolMS.Web\obj\Debug\net8.0\ref\SchoolMS.Web.dll
 D:\School mangement\School Mangement System\SchoolMS.Web\obj\Debug\net8.0\SchoolMS.Web.sourcelink.json
+D:\School mangement\School Mangement System\SchoolMS.Web\bin\Debug\net8.0\libman.json

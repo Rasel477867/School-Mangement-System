@@ -201,6 +201,46 @@
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map"
     },
     {
+      "Id": "D:\\School mangement\\School Mangement System\\SchoolMS.Web\\wwwroot\\lib\\datatables\\css\\jquery.dataTables.css",
+      "PackagePath": "staticwebassets\\lib\\datatables\\css\\jquery.dataTables.css"
+    },
+    {
+      "Id": "D:\\School mangement\\School Mangement System\\SchoolMS.Web\\wwwroot\\lib\\datatables\\css\\jquery.dataTables.min.css",
+      "PackagePath": "staticwebassets\\lib\\datatables\\css\\jquery.dataTables.min.css"
+    },
+    {
+      "Id": "D:\\School mangement\\School Mangement System\\SchoolMS.Web\\wwwroot\\lib\\datatables\\css\\jquery.dataTables_themeroller.css",
+      "PackagePath": "staticwebassets\\lib\\datatables\\css\\jquery.dataTables_themeroller.css"
+    },
+    {
+      "Id": "D:\\School mangement\\School Mangement System\\SchoolMS.Web\\wwwroot\\lib\\datatables\\images\\sort_asc.png",
+      "PackagePath": "staticwebassets\\lib\\datatables\\images\\sort_asc.png"
+    },
+    {
+      "Id": "D:\\School mangement\\School Mangement System\\SchoolMS.Web\\wwwroot\\lib\\datatables\\images\\sort_asc_disabled.png",
+      "PackagePath": "staticwebassets\\lib\\datatables\\images\\sort_asc_disabled.png"
+    },
+    {
+      "Id": "D:\\School mangement\\School Mangement System\\SchoolMS.Web\\wwwroot\\lib\\datatables\\images\\sort_both.png",
+      "PackagePath": "staticwebassets\\lib\\datatables\\images\\sort_both.png"
+    },
+    {
+      "Id": "D:\\School mangement\\School Mangement System\\SchoolMS.Web\\wwwroot\\lib\\datatables\\images\\sort_desc.png",
+      "PackagePath": "staticwebassets\\lib\\datatables\\images\\sort_desc.png"
+    },
+    {
+      "Id": "D:\\School mangement\\School Mangement System\\SchoolMS.Web\\wwwroot\\lib\\datatables\\images\\sort_desc_disabled.png",
+      "PackagePath": "staticwebassets\\lib\\datatables\\images\\sort_desc_disabled.png"
+    },
+    {
+      "Id": "D:\\School mangement\\School Mangement System\\SchoolMS.Web\\wwwroot\\lib\\datatables\\js\\dataTables.bootstrap.js",
+      "PackagePath": "staticwebassets\\lib\\datatables\\js\\dataTables.bootstrap.js"
+    },
+    {
+      "Id": "D:\\School mangement\\School Mangement System\\SchoolMS.Web\\wwwroot\\lib\\datatables\\js\\jquery.dataTables.min.js",
+      "PackagePath": "staticwebassets\\lib\\datatables\\js\\jquery.dataTables.min.js"
+    },
+    {
       "Id": "D:\\School mangement\\School Mangement System\\SchoolMS.Web\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
       "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
     },

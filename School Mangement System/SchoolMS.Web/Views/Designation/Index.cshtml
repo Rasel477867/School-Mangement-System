@@ -39,7 +39,7 @@
 <p>
     <a asp-action="Create" asp-controller="Designation">Create New</a>
 </p>
-<table class="table">
+<table class="table" id="tbid">
     <thead>
         <tr>
             <th>
@@ -83,11 +83,28 @@
     </tbody>
 </table>
 
-
 @section Scripts {
     @{
         await Html.RenderPartialAsync("_ValidationScriptsPartial");
     }
-  
+    <script src="~/lib/datatables/js/datatables.bootstrap.js"></script>
+    <script src="~/lib/datatables/js/jquery.datatables.min.js"></script>
 
+    <script>
+        $(document).ready(() => {
+
+            $("#tbid").dataTable();
+
+
+        })
+
+
+    </script>
+
+}
+
+@section style {
+    <link href="~/lib/datatables/css/jquery.datatables.css" rel="stylesheet" />
+    <link href="~/lib/datatables/css/jquery.datatables.min.css" rel="stylesheet" />
+    <link href="~/lib/datatables/css/jquery.datatables_themeroller.css" rel="stylesheet" />
 }
