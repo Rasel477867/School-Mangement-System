@@ -13,8 +13,20 @@ namespace SchoolMS.Service
 {
     public class SubjectService : Service<Subject>, ISubjectService
     {
+        private readonly ISubjectRepository _subjectRepository;
         public SubjectService(ISubjectRepository repository) : base(repository)
         {
+            _subjectRepository = repository;
+        }
+
+        public bool AddValidation(Subject subject)
+        {
+            return _subjectRepository.AddValidation(subject);
+        }
+
+        public async Task MultipleSubjectAdd(List<Subject> subject)
+        {
+            await _subjectRepository.MultipleSubjectAdd(subject);
         }
     }
 }

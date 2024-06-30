@@ -10,5 +10,7 @@ namespace SchoolMS.Service.Contacts
 {
     public interface ISubjectService:IService<Subject>
     {
+        public Task MultipleSubjectAdd(List<Subject> subject);
+        public bool AddValidation(Subject subject);
     }
 }

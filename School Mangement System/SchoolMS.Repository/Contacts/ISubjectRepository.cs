@@ -10,5 +10,7 @@ namespace SchoolMS.Repository.Contacts
 {
   public interface ISubjectRepository: IRepository<Subject>
     {
+        public Task MultipleSubjectAdd(List<Subject> subject);
+        public bool AddValidation(Subject subject);
     }
 }
