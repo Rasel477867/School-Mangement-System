@@ -36,9 +36,19 @@ namespace SchoolMS.Web.Controllers
             if (ModelState.IsValid)
             {
                 var obj = _mapper.Map<ClassLevel>(model);
-               await _classLevelService.Add(obj);
-                TempData["Success"] = "Inserted Successfully";
-                return RedirectToAction("Index");
+                var state = _classLevelService.AddValidation(obj.Name);
+                if(state)
+                {
+                    await _classLevelService.Add(obj);
+                    TempData["Success"] = "Inserted Successfully";
+                    return RedirectToAction("Index");
+                }
+                else
+                {
+                    TempData["AddD"] = "Duplicate data added";
+                    return View();
+                }
+             
             }
             TempData["Error"] = "Invalid Insert";
             return View(model);

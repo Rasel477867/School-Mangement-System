@@ -2,6 +2,17 @@
 
 <h4>Subjects</h4>
 <hr />
+@if (TempData["AddD"] != null)
+{
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
+    <script type="text/javascript">
+        toastr["error"]('@TempData["AddD"]');
+
+    </script>
+}
+
+
 <div>
     <button id="addbtn" type="button" class="btn btn-secondary">
         Add new Subject

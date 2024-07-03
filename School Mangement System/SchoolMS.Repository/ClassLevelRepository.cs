@@ -12,8 +12,21 @@ namespace SchoolMS.Repository
 {
     public class ClassLevelRepository : Repository<ClassLevel>, IClassLevelRepository
     {
+        private readonly ApplicationDbContext _db;
         public ClassLevelRepository(ApplicationDbContext db) : base(db)
         {
+            _db = db;
+        }
+
+        public bool AddValidation(string name)
+        {
+            var obj=  _db.ClassLevels.Where(c => c.Name.ToLower() == name.ToLower());
+            if (obj.Count()>0)
+            {
+                return false;
+            }
+           else 
+                return true;
         }
     }
 }

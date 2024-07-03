@@ -10,5 +10,6 @@ namespace SchoolMS.Service.Contacts
 {
     public interface IClassLevelService:IService<ClassLevel>  
     {
+        public bool AddValidation(string name);
     }
 }

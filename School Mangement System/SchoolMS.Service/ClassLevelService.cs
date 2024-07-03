@@ -13,8 +13,15 @@ namespace SchoolMS.Service
 {
     public class ClassLevelService : Service<ClassLevel>, IClassLevelService
     {
+        private readonly IClassLevelRepository _classLevelRepository;
         public ClassLevelService(IClassLevelRepository repository) : base(repository)
         {
+            _classLevelRepository = repository;
+        }
+
+        public bool AddValidation(string name)
+        {
+           return _classLevelRepository.AddValidation(name);
         }
     }
 }

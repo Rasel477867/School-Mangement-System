@@ -1,5 +1,26 @@
 ﻿@model SchoolMS.Web.ViewModels.ClassView
 
+@if (TempData["Success"] != null)
+{
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
+    <script type="text/javascript">
+        toastr["success"]('@TempData["Success"]');
+
+    </script>
+}
+@if (TempData["Error"] != null)
+{
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
+    <script type="text/javascript">
+        toastr["error"]('@TempData["Error"]');
+
+    </script>
+}
+
+
+
 <h4>Select your class</h4>
 <hr />
 <div class="row">
@@ -17,12 +38,13 @@
             <div class="form-group">
                 <input type="submit" value="Create Subject" class="btn btn-primary" asp-action="Create"  />
             </div>
+            <br />
+            <div>
+                <button class="btn-primary">Show Subject</button>
+            </div>
         </form>
        
     </div>
 </div>
 
-<div>
-    <a asp-action="Index">Back to List</a>
-</div>
 

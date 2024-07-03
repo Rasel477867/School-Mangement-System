@@ -49,6 +49,7 @@ namespace SchoolMS.Web.Controllers
             //     obj.Code= subject.Code;
             //    await _subjectService.Add(obj);
             // }
+            int y = 0;
             var model = new List<Subject>();
            foreach (var subject in subjects.ListSubjects) {
             var obj=new Subject();
@@ -61,11 +62,27 @@ namespace SchoolMS.Web.Controllers
                 {
                     model.Add(obj);
                 }
+                else
+                {
+                    y = 1;
+                }
             
             }
            if(model.Count>0)
             {
+                if (y == 1)
+                {
+                    TempData["Success"] = "Data Inserted but hove some duplicate Data";
+                }
+                else
+                {
+                    TempData["Success"] = "Data Inserted Successfully";
+                }
                 await _subjectService.MultipleSubjectAdd(model);
+            }
+            else
+            {
+                TempData["Error"] = "Data Invalid ";
             }
          
 

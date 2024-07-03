@@ -10,5 +10,6 @@ namespace SchoolMS.Repository.Contacts
 {
     public interface IClassLevelRepository:IRepository<ClassLevel>
     {
+        public bool AddValidation(string name);
     }
 }
