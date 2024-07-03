@@ -29,6 +29,12 @@ namespace SchoolMS.Web.Controllers
         [HttpPost]
         public IActionResult Create(ClassView obj)
         {
+            if (obj.ClassId == 0)
+            {
+                TempData["InsertError"] = "Select YOUR CLASS";
+                return RedirectToAction("Index");
+            }
+               
             var model = new Subjects();
             model.ListSubjects = new List<SubjectView>();
             var subjectview = new SubjectView()
@@ -41,14 +47,7 @@ namespace SchoolMS.Web.Controllers
         [HttpPost]
         public async Task<IActionResult>CreateSubject(Subjects subjects)
         {
-            //foreach (var subject in subjects.ListSubjects)
-            // {
-            //     var obj = new Subject();
-            //     obj.Name = subject.Name;
-            //     obj.ClassId = subject.ClassId;
-            //     obj.Code= subject.Code;
-            //    await _subjectService.Add(obj);
-            // }
+           
             int y = 0;
             var model = new List<Subject>();
            foreach (var subject in subjects.ListSubjects) {
@@ -72,7 +71,7 @@ namespace SchoolMS.Web.Controllers
             {
                 if (y == 1)
                 {
-                    TempData["Success"] = "Data Inserted but hove some duplicate Data";
+                    TempData["Success"] = "Subject Inserted but duplicate Subject Not Added";
                 }
                 else
                 {
@@ -82,7 +81,7 @@ namespace SchoolMS.Web.Controllers
             }
             else
             {
-                TempData["Error"] = "Data Invalid ";
+                TempData["Error"] = " Invalid Subject";
             }
          
 

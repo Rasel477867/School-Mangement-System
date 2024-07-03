@@ -14,9 +14,8 @@
 
 
 <div>
-    <button id="addbtn" type="button" class="btn btn-secondary">
-        Add new Subject
-    </button>
+    <a class="btn btn-primary" href="javascript:void(0)" onclick="Add('@Model.ListSubjects[0].ClassId')">Add new</a>
+    @* <a href="#" onclick="Add('asp-for="ListSubjects[0].ClassId" ')" class="text-danger" title="Details">Add New Subject</a> *@
 </div>
 <hr />
 <div class="row">
@@ -45,7 +44,7 @@
                     </div>
                 </div>
             </div>
-
+            
             <div class="form-group">
                 <input type="submit" value="Create" class="btn btn-primary" asp-action="CreateSubject" />
             </div>
@@ -59,9 +58,10 @@
 
 @section Scripts {
     <script type="text/javascript">
-        $(document).ready(() => {
-            var index = 1;
-            $("#addbtn").click(function () {
+
+        var index = 1;
+        function Add(id) {
+
                 var newSubject = `
                             <div class="subject-group" data-index="${index}">
                                 <div class="form-group">
@@ -76,14 +76,46 @@
                                 </div>
                                 <div class="form-group">
                                     <label for="ListSubjects_${index}__ClassId" class="control-label">Class ID</label>
-                                    <input name="ListSubjects[${index}].ClassId" class="form-control" placeholder="Enter Class Id" />
+                                     <input name="ListSubjects[${index}].ClassId" class="form-control" placeholder="Enter Class Id" value='${id}' disabled   />
+                                    <input type="hidden" name="ListSubjects[${index}].ClassId" class="form-control"  value='${id}'  />
                                     <span class="text-danger" data-valmsg-for="ListSubjects[${index}].ClassId" data-valmsg-replace="true"></span>
                                 </div>
                             </div>
                         `;
                 index++;
                 $("#subject-container").append(newSubject);
-            });
+
+
+
+
+        }
+        $(document).ready(() => {
+        
+            
+            
+            // $("#addbtn").click(function () {
+            //     var newSubject = `
+            //                 <div class="subject-group" data-index="${index}">
+            //                     <div class="form-group">
+            //                         <label for="ListSubjects_${index}__Name" class="control-label">Name</label>
+            //                         <input name="ListSubjects[${index}].Name" class="form-control" placeholder="Enter Name" />
+            //                         <span class="text-danger" data-valmsg-for="ListSubjects[${index}].Name" data-valmsg-replace="true"></span>
+            //                     </div>
+            //                     <div class="form-group">
+            //                         <label for="ListSubjects_${index}__Code" class="control-label">Code</label>
+            //                         <input name="ListSubjects[${index}].Code" class="form-control" placeholder="Enter Code" />
+            //                         <span class="text-danger" data-valmsg-for="ListSubjects[${index}].Code" data-valmsg-replace="true"></span>
+            //                     </div>
+            //                     <div class="form-group">
+            //                         <label for="ListSubjects_${index}__ClassId" class="control-label">Class ID</label>
+            //                         <input name="ListSubjects[${index}].ClassId" class="form-control" placeholder="Enter Class Id" />
+            //                         <span class="text-danger" data-valmsg-for="ListSubjects[${index}].ClassId" data-valmsg-replace="true"></span>
+            //                     </div>
+            //                 </div>
+            //             `;
+            //     index++;
+            //     $("#subject-container").append(newSubject);
+            // });
         });
     </script>
 }

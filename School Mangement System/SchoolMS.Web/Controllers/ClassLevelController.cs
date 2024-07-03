@@ -45,7 +45,7 @@ namespace SchoolMS.Web.Controllers
                 }
                 else
                 {
-                    TempData["AddD"] = "Duplicate data added";
+                    TempData["AddD"] = "Duplicate Class Can't Insert";
                     return View();
                 }
              
