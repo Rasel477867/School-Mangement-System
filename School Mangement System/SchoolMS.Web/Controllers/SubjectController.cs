@@ -50,14 +50,24 @@ namespace SchoolMS.Web.Controllers
            
             int y = 0;
             var model = new List<Subject>();
-           foreach (var subject in subjects.ListSubjects) {
-            var obj=new Subject();
-                
-                obj.Name= subject.Name;
-                obj.Code= subject.Code;
-                obj.ClassId= subject.ClassId;
+
+            //model = subjects.ListSubjects.Select( x=> new Subject
+            //{
+            //    Name = x.Name,
+            //    Code = x.Code,
+            //    ClassId = x.ClassId
+            //}).ToList();
+
+
+            foreach (var subject in subjects.ListSubjects)
+            {
+                var obj = new Subject();
+
+                obj.Name = subject.Name;
+                obj.Code = subject.Code;
+                obj.ClassId = subject.ClassId;
                 var state = _subjectService.AddValidation(obj);
-                if(state)
+                if (state)
                 {
                     model.Add(obj);
                 }
@@ -65,9 +75,9 @@ namespace SchoolMS.Web.Controllers
                 {
                     y = 1;
                 }
-            
+
             }
-           if(model.Count>0)
+            if (model.Count>0)
             {
                 if (y == 1)
                 {
@@ -87,7 +97,26 @@ namespace SchoolMS.Web.Controllers
 
            return RedirectToAction("Index");
         }
-      
+        [HttpPost]
+        public async Task<IActionResult> SubjectDetails(ClassView model)
+        {
+          if(ModelState.IsValid)
+            {
+                var obj = await _subjectService.SubjectListDetails(model.ClassId);
+                if (obj.Count() == 0)
+                {
+                    TempData["Count"] = "No Subject Available";
+                    return View(obj);
+                }
+
+                TempData["Table"] = "table find";
+                return View(obj);
+            }
+          return RedirectToAction("Index");
+
+        }
+
+
 
     }
 }

@@ -1,4 +1,5 @@
-﻿using SchoolMS.Core.Models;
+﻿using Microsoft.EntityFrameworkCore;
+using SchoolMS.Core.Models;
 using SchoolMS.Repository.Contacts;
 using SchoolMS.Repository.Core;
 using SchoolMS.Repository.Data;
@@ -32,7 +33,7 @@ namespace SchoolMS.Repository
         public async Task MultipleSubjectAdd(List<Subject> subjects)
        {
             _db.Subjects.AddRange(subjects);
-         await _db.SaveChangesAsync();
+            await _db.SaveChangesAsync();
             //foreach (Subject obj in subjects)
             // {
             //     _db.Subjects.Add(obj);
@@ -40,5 +41,10 @@ namespace SchoolMS.Repository
             // }
     
        }
+
+        public async Task<List<Subject>> SubjectListDetails(int id)
+        {
+            return await _db.Subjects.Where(c=>c.ClassId == id).ToListAsync();
+        }
     }
 }

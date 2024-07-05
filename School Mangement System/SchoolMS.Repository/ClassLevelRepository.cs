@@ -1,4 +1,5 @@
-﻿using SchoolMS.Core.Models;
+﻿using Microsoft.EntityFrameworkCore;
+using SchoolMS.Core.Models;
 using SchoolMS.Repository.Contacts;
 using SchoolMS.Repository.Core;
 using SchoolMS.Repository.Data;

@@ -28,5 +28,10 @@ namespace SchoolMS.Service
         {
             await _subjectRepository.MultipleSubjectAdd(subject);
         }
+
+        public async Task<List<Subject>> SubjectListDetails(int id)
+        {
+            return await _subjectRepository.SubjectListDetails(id);
+        }
     }
 }
