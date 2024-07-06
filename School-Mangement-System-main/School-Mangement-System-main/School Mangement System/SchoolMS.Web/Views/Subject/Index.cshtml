@@ -1,0 +1,60 @@
+﻿@model SchoolMS.Web.ViewModels.ClassView
+
+@if (TempData["Success"] != null)
+{
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
+    <script type="text/javascript">
+        toastr["success"]('@TempData["Success"]');
+
+    </script>
+}
+@if (TempData["Error"] != null)
+{
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
+    <script type="text/javascript">
+        toastr["error"]('@TempData["Error"]');
+
+    </script>
+}
+@if (TempData["InsertError"] != null)
+{
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
+    <script type="text/javascript">
+        toastr["error"]('@TempData["InsertError"]');
+
+    </script>
+}
+
+
+
+<h4>Select your class</h4>
+<hr />
+
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Index">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="ClassId" class="control-label"></label>
+                <select asp-for="ClassId" class="form-control"  asp-items="Model.ClassList"> 
+                 <option value="">--SELECT--</option>
+
+                </select>
+                <span asp-validation-for="ClassId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create Subject" class="btn btn-primary" asp-action="Create"  />
+            </div>
+            <br />
+            <div class="form-group">
+                <input type="submit" value="Show Subject" class="btn btn-secondary" asp-action="SubjectDetails" />
+            </div>
+        </form>
+       
+    </div>
+ 
+</div>
+

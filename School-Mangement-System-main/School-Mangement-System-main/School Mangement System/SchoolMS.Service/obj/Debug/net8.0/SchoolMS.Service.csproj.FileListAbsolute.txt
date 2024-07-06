@@ -1,0 +1,60 @@
+D:\Development\School-Mangement\School Mangement System\SchoolMS.Service\bin\Debug\net8.0\SchoolMS.Service.deps.json
+D:\Development\School-Mangement\School Mangement System\SchoolMS.Service\bin\Debug\net8.0\SchoolMS.Service.runtimeconfig.json
+D:\Development\School-Mangement\School Mangement System\SchoolMS.Service\bin\Debug\net8.0\SchoolMS.Service.dll
+D:\Development\School-Mangement\School Mangement System\SchoolMS.Service\bin\Debug\net8.0\SchoolMS.Service.pdb
+D:\Development\School-Mangement\School Mangement System\SchoolMS.Service\bin\Debug\net8.0\SchoolMS.Core.dll
+D:\Development\School-Mangement\School Mangement System\SchoolMS.Service\bin\Debug\net8.0\SchoolMS.Repository.dll
+D:\Development\School-Mangement\School Mangement System\SchoolMS.Service\bin\Debug\net8.0\SchoolMS.Repository.pdb
+D:\Development\School-Mangement\School Mangement System\SchoolMS.Service\bin\Debug\net8.0\SchoolMS.Core.pdb
+D:\Development\School-Mangement\School Mangement System\SchoolMS.Service\obj\Debug\net8.0\SchoolMS.Service.csproj.AssemblyReference.cache
+D:\Development\School-Mangement\School Mangement System\SchoolMS.Service\obj\Debug\net8.0\SchoolMS.Service.GeneratedMSBuildEditorConfig.editorconfig
+D:\Development\School-Mangement\School Mangement System\SchoolMS.Service\obj\Debug\net8.0\SchoolMS.Service.AssemblyInfoInputs.cache
+D:\Development\School-Mangement\School Mangement System\SchoolMS.Service\obj\Debug\net8.0\SchoolMS.Service.AssemblyInfo.cs
+D:\Development\School-Mangement\School Mangement System\SchoolMS.Service\obj\Debug\net8.0\SchoolMS.Service.csproj.CoreCompileInputs.cache
+D:\Development\School-Mangement\School Mangement System\SchoolMS.Service\obj\Debug\net8.0\SchoolMS.Service.sourcelink.json
+D:\Development\School-Mangement\School Mangement System\SchoolMS.Service\obj\Debug\net8.0\SchoolMS.Service.csproj.CopyComplete
+D:\Development\School-Mangement\School Mangement System\SchoolMS.Service\obj\Debug\net8.0\SchoolMS.Service.dll
+D:\Development\School-Mangement\School Mangement System\SchoolMS.Service\obj\Debug\net8.0\refint\SchoolMS.Service.dll
+D:\Development\School-Mangement\School Mangement System\SchoolMS.Service\obj\Debug\net8.0\SchoolMS.Service.pdb
+D:\Development\School-Mangement\School Mangement System\SchoolMS.Service\obj\Debug\net8.0\SchoolMS.Service.genruntimeconfig.cache
+D:\Development\School-Mangement\School Mangement System\SchoolMS.Service\obj\Debug\net8.0\ref\SchoolMS.Service.dll
+D:\School mangement\School Mangement System\SchoolMS.Service\bin\Debug\net8.0\SchoolMS.Service.deps.json
+D:\School mangement\School Mangement System\SchoolMS.Service\bin\Debug\net8.0\SchoolMS.Service.runtimeconfig.json
+D:\School mangement\School Mangement System\SchoolMS.Service\bin\Debug\net8.0\SchoolMS.Service.dll
+D:\School mangement\School Mangement System\SchoolMS.Service\bin\Debug\net8.0\SchoolMS.Service.pdb
+D:\School mangement\School Mangement System\SchoolMS.Service\bin\Debug\net8.0\SchoolMS.Core.dll
+D:\School mangement\School Mangement System\SchoolMS.Service\bin\Debug\net8.0\SchoolMS.Repository.dll
+D:\School mangement\School Mangement System\SchoolMS.Service\bin\Debug\net8.0\SchoolMS.Repository.pdb
+D:\School mangement\School Mangement System\SchoolMS.Service\bin\Debug\net8.0\SchoolMS.Core.pdb
+D:\School mangement\School Mangement System\SchoolMS.Service\obj\Debug\net8.0\SchoolMS.Service.csproj.AssemblyReference.cache
+D:\School mangement\School Mangement System\SchoolMS.Service\obj\Debug\net8.0\SchoolMS.Service.GeneratedMSBuildEditorConfig.editorconfig
+D:\School mangement\School Mangement System\SchoolMS.Service\obj\Debug\net8.0\SchoolMS.Service.AssemblyInfoInputs.cache
+D:\School mangement\School Mangement System\SchoolMS.Service\obj\Debug\net8.0\SchoolMS.Service.AssemblyInfo.cs
+D:\School mangement\School Mangement System\SchoolMS.Service\obj\Debug\net8.0\SchoolMS.Service.csproj.CoreCompileInputs.cache
+D:\School mangement\School Mangement System\SchoolMS.Service\obj\Debug\net8.0\SchoolMS.Service.csproj.CopyComplete
+D:\School mangement\School Mangement System\SchoolMS.Service\obj\Debug\net8.0\SchoolMS.Service.dll
+D:\School mangement\School Mangement System\SchoolMS.Service\obj\Debug\net8.0\refint\SchoolMS.Service.dll
+D:\School mangement\School Mangement System\SchoolMS.Service\obj\Debug\net8.0\SchoolMS.Service.pdb
+D:\School mangement\School Mangement System\SchoolMS.Service\obj\Debug\net8.0\SchoolMS.Service.genruntimeconfig.cache
+D:\School mangement\School Mangement System\SchoolMS.Service\obj\Debug\net8.0\ref\SchoolMS.Service.dll
+D:\School mangement\School Mangement System\SchoolMS.Service\obj\Debug\net8.0\SchoolMS.Service.sourcelink.json
+D:\School mangement\School-Mangement-System-main\School-Mangement-System-main\School Mangement System\SchoolMS.Service\bin\Debug\net8.0\SchoolMS.Service.deps.json
+D:\School mangement\School-Mangement-System-main\School-Mangement-System-main\School Mangement System\SchoolMS.Service\bin\Debug\net8.0\SchoolMS.Service.runtimeconfig.json
+D:\School mangement\School-Mangement-System-main\School-Mangement-System-main\School Mangement System\SchoolMS.Service\bin\Debug\net8.0\SchoolMS.Service.dll
+D:\School mangement\School-Mangement-System-main\School-Mangement-System-main\School Mangement System\SchoolMS.Service\bin\Debug\net8.0\SchoolMS.Service.pdb
+D:\School mangement\School-Mangement-System-main\School-Mangement-System-main\School Mangement System\SchoolMS.Service\bin\Debug\net8.0\SchoolMS.Core.dll
+D:\School mangement\School-Mangement-System-main\School-Mangement-System-main\School Mangement System\SchoolMS.Service\bin\Debug\net8.0\SchoolMS.Repository.dll
+D:\School mangement\School-Mangement-System-main\School-Mangement-System-main\School Mangement System\SchoolMS.Service\bin\Debug\net8.0\SchoolMS.Repository.pdb
+D:\School mangement\School-Mangement-System-main\School-Mangement-System-main\School Mangement System\SchoolMS.Service\bin\Debug\net8.0\SchoolMS.Core.pdb
+D:\School mangement\School-Mangement-System-main\School-Mangement-System-main\School Mangement System\SchoolMS.Service\obj\Debug\net8.0\SchoolMS.Service.csproj.AssemblyReference.cache
+D:\School mangement\School-Mangement-System-main\School-Mangement-System-main\School Mangement System\SchoolMS.Service\obj\Debug\net8.0\SchoolMS.Service.GeneratedMSBuildEditorConfig.editorconfig
+D:\School mangement\School-Mangement-System-main\School-Mangement-System-main\School Mangement System\SchoolMS.Service\obj\Debug\net8.0\SchoolMS.Service.AssemblyInfoInputs.cache
+D:\School mangement\School-Mangement-System-main\School-Mangement-System-main\School Mangement System\SchoolMS.Service\obj\Debug\net8.0\SchoolMS.Service.AssemblyInfo.cs
+D:\School mangement\School-Mangement-System-main\School-Mangement-System-main\School Mangement System\SchoolMS.Service\obj\Debug\net8.0\SchoolMS.Service.csproj.CoreCompileInputs.cache
+D:\School mangement\School-Mangement-System-main\School-Mangement-System-main\School Mangement System\SchoolMS.Service\obj\Debug\net8.0\SchoolMS.Service.sourcelink.json
+D:\School mangement\School-Mangement-System-main\School-Mangement-System-main\School Mangement System\SchoolMS.Service\obj\Debug\net8.0\SchoolMS.Service.csproj.CopyComplete
+D:\School mangement\School-Mangement-System-main\School-Mangement-System-main\School Mangement System\SchoolMS.Service\obj\Debug\net8.0\SchoolMS.Service.dll
+D:\School mangement\School-Mangement-System-main\School-Mangement-System-main\School Mangement System\SchoolMS.Service\obj\Debug\net8.0\refint\SchoolMS.Service.dll
+D:\School mangement\School-Mangement-System-main\School-Mangement-System-main\School Mangement System\SchoolMS.Service\obj\Debug\net8.0\SchoolMS.Service.pdb
+D:\School mangement\School-Mangement-System-main\School-Mangement-System-main\School Mangement System\SchoolMS.Service\obj\Debug\net8.0\SchoolMS.Service.genruntimeconfig.cache
+D:\School mangement\School-Mangement-System-main\School-Mangement-System-main\School Mangement System\SchoolMS.Service\obj\Debug\net8.0\ref\SchoolMS.Service.dll
