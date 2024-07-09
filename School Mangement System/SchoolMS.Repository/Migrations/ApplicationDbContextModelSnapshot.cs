@@ -240,10 +240,14 @@ namespace SchoolMS.Repository.Migrations
                     b.Property<int>("StudentId")
                         .HasColumnType("int");
 
+                    b.Property<int>("SubjectId")
+                        .HasColumnType("int");
+
                     b.HasKey("Id");
 
-                    b.HasIndex("StudentId")
-                        .IsUnique();
+                    b.HasIndex("StudentId");
+
+                    b.HasIndex("SubjectId");
 
                     b.ToTable("Attenants");
                 });
@@ -396,9 +400,14 @@ namespace SchoolMS.Repository.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<int?>("SubjectId")
+                        .HasColumnType("int");
+
                     b.HasKey("Id");
 
                     b.HasIndex("ClassId");
+
+                    b.HasIndex("SubjectId");
 
                     b.ToTable("Subjects");
                 });
@@ -506,12 +515,20 @@ namespace SchoolMS.Repository.Migrations
             modelBuilder.Entity("SchoolMS.Core.Models.Attendence", b =>
                 {
                     b.HasOne("SchoolMS.Core.Models.Student", "Student")
-                        .WithOne("Attendence")
-                        .HasForeignKey("SchoolMS.Core.Models.Attendence", "StudentId")
+                        .WithMany("Attendences")
+                        .HasForeignKey("StudentId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("SchoolMS.Core.Models.Subject", "Subject")
+                        .WithMany()
+                        .HasForeignKey("SubjectId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
                     b.Navigation("Student");
+
+                    b.Navigation("Subject");
                 });
 
             modelBuilder.Entity("SchoolMS.Core.Models.ResultSheet", b =>
@@ -519,19 +536,19 @@ namespace SchoolMS.Repository.Migrations
                     b.HasOne("SchoolMS.Core.Models.ClassLevel", "ClassLevel")
                         .WithOne("ResultSheet")
                         .HasForeignKey("SchoolMS.Core.Models.ResultSheet", "ClassId")
-                        .OnDelete(DeleteBehavior.NoAction)
+                        .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
                     b.HasOne("SchoolMS.Core.Models.Student", "Student")
                         .WithOne("ResultSheet")
                         .HasForeignKey("SchoolMS.Core.Models.ResultSheet", "StudentId")
-                        .OnDelete(DeleteBehavior.NoAction)
+                        .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
                     b.HasOne("SchoolMS.Core.Models.Subject", "Subject")
                         .WithOne("ResultSheet")
                         .HasForeignKey("SchoolMS.Core.Models.ResultSheet", "SubjectId")
-                        .OnDelete(DeleteBehavior.NoAction)
+                        .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
                     b.Navigation("ClassLevel");
@@ -559,6 +576,10 @@ namespace SchoolMS.Repository.Migrations
                         .HasForeignKey("ClassId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
+
+                    b.HasOne("SchoolMS.Core.Models.Subject", null)
+                        .WithMany("Subjects")
+                        .HasForeignKey("SubjectId");
 
                     b.Navigation("ClassLevel");
                 });
@@ -601,8 +622,7 @@ namespace SchoolMS.Repository.Migrations
 
             modelBuilder.Entity("SchoolMS.Core.Models.Student", b =>
                 {
-                    b.Navigation("Attendence")
-                        .IsRequired();
+                    b.Navigation("Attendences");
 
                     b.Navigation("ResultSheet")
                         .IsRequired();
@@ -612,6 +632,8 @@ namespace SchoolMS.Repository.Migrations
                 {
                     b.Navigation("ResultSheet")
                         .IsRequired();
+
+                    b.Navigation("Subjects");
                 });
 #pragma warning restore 612, 618
         }

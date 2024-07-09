@@ -4,9 +4,9 @@ using SchoolMS.Core.Models.Core;
 
 namespace SchoolMS.Core.Models
 {
-    public class Student:BaseEntity
+    public class Student : BaseEntity
     {
-        public string  Name { get; set; }
+        public string Name { get; set; }
         public int Age { get; set; }
         public String Phone { get; set; }
         public String Email { get; set; }
@@ -14,10 +14,10 @@ namespace SchoolMS.Core.Models
         public int ClassId { get; set; }
         [ForeignKey(nameof(ClassId))]
         public ClassLevel ClassLevel { get; set; }
-       
+
         public ResultSheet ResultSheet { get; set; }
-  
-        public Attendence Attendence { get; set; }
+
+        public List<Attendence> Attendences { get; set; }
 
 
 

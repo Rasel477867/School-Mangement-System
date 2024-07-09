@@ -15,6 +15,8 @@ namespace SchoolMS.Core.Models
         [ForeignKey(nameof(StudentId))]
         public int StudentId { get; set; }
         public Student Student { get; set; }
+        public int SubjectId {  get; set; }
+        public Subject Subject { get; set; }
 
     }
 }

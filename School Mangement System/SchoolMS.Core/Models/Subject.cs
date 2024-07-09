@@ -12,5 +12,6 @@ namespace SchoolMS.Core.Models
         public ClassLevel ClassLevel { get; set; }
    
         public ResultSheet ResultSheet { get; set; }
+        public List<Subject> Subjects { get; set;}
     }
 }
