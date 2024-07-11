@@ -13,5 +13,6 @@ namespace SchoolMS.Repository.Contacts
         public Task MultipleSubjectAdd(List<Subject> subject);
         public bool AddValidation(Subject subject);
         public Task<List<Subject>> SubjectListDetails(int id);
+        public Task<List<Subject>> GetSubjectsByClassId(int id);
     }
 }

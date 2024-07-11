@@ -30,6 +30,11 @@ namespace SchoolMS.Repository
             
         }
 
+        public async Task<List<Subject>> GetSubjectsByClassId(int id)
+        {
+            return await _db.Subjects.Where(x=>x.ClassId == id).ToListAsync();
+         }
+
         public async Task MultipleSubjectAdd(List<Subject> subjects)
        {
             _db.Subjects.AddRange(subjects);

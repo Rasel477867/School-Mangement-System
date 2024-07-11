@@ -12,8 +12,16 @@ namespace SchoolMS.Repository
 {
     public class AttendenceRepository : Repository<Attendence>, IAttendenceRepository
     {
+        private readonly ApplicationDbContext _db;
         public AttendenceRepository(ApplicationDbContext db) : base(db)
         {
+            _db = db;
+        }
+
+        public async Task<bool> AddMulltipleAttendence(List<Attendence> mulltipleAttences)
+        {
+            await _db.Attenants.AddRangeAsync(mulltipleAttences);
+            return await _db.SaveChangesAsync() > 0;
         }
     }
 }

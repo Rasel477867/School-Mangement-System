@@ -24,6 +24,11 @@ namespace SchoolMS.Service
             return _subjectRepository.AddValidation(subject);
         }
 
+        public async Task<List<Subject>> GetSubjectsByClassId(int id)
+        {
+           return await _subjectRepository.GetSubjectsByClassId(id);
+        }
+
         public async Task MultipleSubjectAdd(List<Subject> subject)
         {
             await _subjectRepository.MultipleSubjectAdd(subject);

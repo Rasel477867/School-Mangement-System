@@ -10,5 +10,6 @@ namespace SchoolMS.Repository.Contacts
 {
    public interface IAttendenceRepository:IRepository<Attendence>
     {
+        public Task<bool>AddMulltipleAttendence(List<Attendence> mulltipleAttences);
     }
 }

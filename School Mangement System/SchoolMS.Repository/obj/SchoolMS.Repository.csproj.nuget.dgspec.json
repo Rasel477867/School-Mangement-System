@@ -50,7 +50,7 @@
             },
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
-              "version": "[8.0.5, )"
+              "version": "[8.0.7, )"
             },
             "Microsoft.EntityFrameworkCore.SqlServer": {
               "target": "Package",
@@ -61,6 +61,10 @@
               "suppressParent": "All",
               "target": "Package",
               "version": "[8.0.5, )"
+            },
+            "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
+              "target": "Package",
+              "version": "[8.0.3, )"
             }
           },
           "imports": [
@@ -133,7 +137,7 @@
             },
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
-              "version": "[8.0.5, )"
+              "version": "[8.0.7, )"
             },
             "Microsoft.EntityFrameworkCore.SqlServer": {
               "target": "Package",
@@ -144,6 +148,10 @@
               "suppressParent": "All",
               "target": "Package",
               "version": "[8.0.5, )"
+            },
+            "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
+              "target": "Package",
+              "version": "[8.0.3, )"
             }
           },
           "imports": [

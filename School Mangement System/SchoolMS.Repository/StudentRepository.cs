@@ -20,6 +20,11 @@ namespace SchoolMS.Repository
             _db = db;
         }
 
+        public async Task<List<Student>> GetStudentsByClassId(int id)
+        {
+            return await _db.Students.Where(c=>c.ClassId == id).ToListAsync();
+        }
+
         public async Task<List<Student>> Studentdetails(int id)
         {
             return await _db.Students.Where(c => c.ClassId == id).ToListAsync();

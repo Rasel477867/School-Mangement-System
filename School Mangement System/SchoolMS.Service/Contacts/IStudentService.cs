@@ -11,5 +11,6 @@ namespace SchoolMS.Service.Contacts
     public interface IStudentService:IService<Student>
     {
         public Task<List<Student>> Studentdetails(int id);
+        public Task<List<Student>> GetStudentsByClassId(int id);
     }
 }

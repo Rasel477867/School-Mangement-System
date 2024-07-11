@@ -26,6 +26,14 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = D:\School mangement\School Mangement System\SchoolMS.Web
 build_property._RazorSourceGeneratorDebug = 
 
+[D:/School mangement/School Mangement System/SchoolMS.Web/Views/Attendence/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXR0ZW5kZW5jZVxDcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/School mangement/School Mangement System/SchoolMS.Web/Views/Attendence/CreateAttendence.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXR0ZW5kZW5jZVxDcmVhdGVBdHRlbmRlbmNlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [D:/School mangement/School Mangement System/SchoolMS.Web/Views/Attendence/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXR0ZW5kZW5jZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 

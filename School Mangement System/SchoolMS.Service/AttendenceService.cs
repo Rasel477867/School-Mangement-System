@@ -13,8 +13,16 @@ namespace SchoolMS.Service
 {
     public class AttendenceService : Service<Attendence>, IAttendenceService
     {
+        private readonly IAttendenceRepository _attendenceRepository;
         public AttendenceService(IAttendenceRepository repository) : base(repository)
         {
+            _attendenceRepository = repository;
+        }
+
+        public async Task<bool> AddMulltipleAttendence(List<Attendence> mulltipleAttences)
+        {
+            return await _attendenceRepository.AddMulltipleAttendence(mulltipleAttences);
+            
         }
     }
 }

@@ -19,6 +19,10 @@ namespace SchoolMS.Service
             _studentRepository = repository;
         }
 
+        public async Task<List<Student>> GetStudentsByClassId(int id)
+        {
+            return await _studentRepository.GetStudentsByClassId(id);
+        }
         public async Task<List<Student>> Studentdetails(int id)
         {
            return await _studentRepository.Studentdetails(id);

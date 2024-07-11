@@ -1,0 +1,68 @@
+﻿@model List<SchoolMS.Web.ViewModels.AttendenceView>
+
+@{
+    ViewData["Title"] = "CreateAttendence";
+}
+
+<h3 class="text-center">Create Attendence</h3>
+ 
+<p class="text-center">
+    @Model[0].Date
+</p>
+
+<hr />
+<div class="row">
+    <div class="col-md-6">
+        <div class="row">
+            
+            <div class="col-4 text">
+                <label class="form-check-label">Student Id  </label>
+            </div>
+            <div class="col-4 text-center">
+                <label class="form-check-label">Student Name  </label>
+            </div>
+            <div class="col-4 text-end">
+                <label class="form-check-label">Student Present  </label>
+            </div>
+
+
+
+        </div>
+        <form asp-action="AttendenceCreate">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            @for (int i = 0; i < Model.Count; i++)
+            {
+                <div class="row">
+                    <input type="hidden" asp-for="@Model[i].Id" />
+                    <input type="hidden" asp-for="@Model[i].Name" />
+                    <input type="hidden" asp-for="@Model[i].SubjectId" />
+                    <input type="hidden" asp-for="@Model[i].Name" />
+                    <div class="col-4 text">
+                        <label class="form-check-label">@Model[i].Id  </label>
+                    </div>
+                   <div class="col-4 ">
+                        <label class="form-check-label ">@Model[i].Name  </label>
+                   </div>
+                   <div class="col-4 text-end">
+                        <input class="form-check-input" type="checkbox" asp-for="@Model[i].IsPresent" />
+                   </div>
+                  
+                  
+                    
+                </div>
+            }
+
+
+            <br />
+            <br />
+            <input type="submit" value="Submit" class="btn btn-primary" asp-action="AttendenceCreate" />
+
+        </form>
+    </div>
+</div>
+
+
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
