@@ -11,5 +11,6 @@ namespace SchoolMS.Service.Contacts
     public interface IAttendenceService:IService<Attendence>
     {
         public Task<bool> AddMulltipleAttendence(List<Attendence> mulltipleAttences);
+        public Task<float> AttendenceCalculationBySubject(int SubjectId, int StudentId);
     }
 }

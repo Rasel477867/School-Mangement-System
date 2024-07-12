@@ -102,8 +102,26 @@ namespace SchoolMS.Web.Controllers
         [HttpPost]
         public async Task<IActionResult> StudentAttendenceResult(ClassStudentView classStudent)
         {
+           
+            var subjectList = await _subjectService.GetSubjectsByClassId(classStudent.ClassId);
+            var ListAttendenceStudentView = new List<StudentAttendenceView>();
+            int i = 1;
+            foreach (var subject in subjectList)
+            {
+                var studentattendence = new StudentAttendenceView();
+                studentattendence.SubjectName = subject.Name;
+                studentattendence.SubjectId = subject.Id;
+                studentattendence.StudentId = classStudent.StudentId;
+                var studnet=await _studentService.GetById(classStudent.StudentId);
+                studentattendence.StudentName = studnet.Name;
+                studentattendence.Serial = i;
+                studentattendence.Attendence = await _attendenceService.AttendenceCalculationBySubject(subject.Id, classStudent.StudentId);
+                ListAttendenceStudentView.Add(studentattendence);
+                i++;
 
-            return View(classStudent);
+            }
+
+            return View(ListAttendenceStudentView);
         }
     }
 }

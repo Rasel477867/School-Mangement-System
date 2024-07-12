@@ -24,5 +24,10 @@ namespace SchoolMS.Service
             return await _attendenceRepository.AddMulltipleAttendence(mulltipleAttences);
             
         }
+
+        public Task<float> AttendenceCalculationBySubject(int SubjectId, int StudentId)
+        {
+            return _attendenceRepository.AttendenceCalculationBySubject(SubjectId, StudentId);
+        }
     }
 }

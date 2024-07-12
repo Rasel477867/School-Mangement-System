@@ -23,5 +23,13 @@ namespace SchoolMS.Repository
             await _db.Attenants.AddRangeAsync(mulltipleAttences);
             return await _db.SaveChangesAsync() > 0;
         }
+
+        public async Task<float> AttendenceCalculationBySubject(int SubjectId, int StudentId)
+        {
+            float total= _db.Attenants.Where(x=>x.SubjectId==SubjectId &&  x.StudentId==StudentId).Count();
+            float present=_db.Attenants.Where(x=>x.SubjectId==SubjectId && x.StudentId==StudentId && x.IsPresent).Count();
+            return ((present / total) * (100));
+
+        }
     }
 }
