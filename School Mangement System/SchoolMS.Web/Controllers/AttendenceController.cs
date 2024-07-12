@@ -40,6 +40,11 @@ namespace SchoolMS.Web.Controllers
         {
             var model = await _subjectService.GetSubjectsByClassId(id);
             return Json(model);
+        } 
+        public async Task<IActionResult>GetStudent(int id)
+        {
+            var model = await _studentService.GetStudentsByClassId(id);
+            return Json(model);
         }
         [HttpPost]
         public async Task<IActionResult> CreateAttendence(ClassSubjectView model)
@@ -64,6 +69,7 @@ namespace SchoolMS.Web.Controllers
         [HttpPost]
         public async Task<IActionResult> AttendenceCreate(List<AttendenceView> attendences)
         {
+         
             var model = new List<Attendence>();
             model=attendences.Select(x=>new Attendence
             {
@@ -81,6 +87,23 @@ namespace SchoolMS.Web.Controllers
             }
 
             return RedirectToAction("Index");
+        }
+        public async Task<IActionResult> CreateStudentAttendence()
+        {
+            var model = new ClassStudentView();
+            model.ClassLists = _classLevelService.GetAll().Result.Select(x => new SelectListItem
+            {
+                Value = x.Id.ToString(),
+                Text = x.Name
+            }).ToList();
+
+            return View(model);
+        }
+        [HttpPost]
+        public async Task<IActionResult> StudentAttendenceResult(ClassStudentView classStudent)
+        {
+
+            return View(classStudent);
         }
     }
 }

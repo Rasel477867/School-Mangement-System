@@ -1,0 +1,94 @@
+﻿@model SchoolMS.Web.ViewModels.ClassStudentView
+
+@{
+    ViewData["Title"] = "CreateStudentAttendence";
+}
+
+
+<h1>Create</h1>
+
+<h4>ClassSubjectView</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="StudentAttendenceResult">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="ClassId" class="control-label"></label>
+                <Select name="ClassId" id="ClassId" class="form-control" asp-items="Model.ClassLists">
+
+                    <option value="">--Choose--</option>
+
+                </Select>
+                <span asp-validation-for="ClassId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="StudentId" class="control-label"></label>
+                <Select name="StudentId" id="StudentId" class="form-control">
+
+                    <option value="">--Choose--</option>
+
+                </Select>
+                <span asp-validation-for="StudentId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+
+                <input type="submit" value="Attendence" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<br />
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+
+@section Scripts {
+
+    <script>
+        // console.log($("#DepartmentId"));
+        $("#ClassId").change(function () {
+            var ClassId = $("#ClassId").val();
+            //console.log(departmentId);
+
+
+            $('#StudentId').empty();
+
+
+            $.ajax({
+                type: "POST",
+                url: "/Attendence/GetStudent",
+                data: { id: ClassId },
+
+                success: function (response) {
+                  
+                    var sut = response;
+                    var option = "<option value=''> Select </option>";
+                    $("#StudentId").append(option);
+                    $.each(sut, function (key, student) {
+                       
+
+                        var option = "<option value='" + student.id + "'>" + student.name + "</option>";
+                      
+                        $('#StudentId').append(option);
+
+                    });
+
+                },
+                error: function (response) {
+                    alert(response.message);
+                }
+            });
+
+
+
+        });
+
+
+
+
+
+    </script>
+}
