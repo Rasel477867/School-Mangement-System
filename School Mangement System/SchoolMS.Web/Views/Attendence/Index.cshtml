@@ -23,12 +23,51 @@
         </button>
     </div> 
     <div class="col-6 ">
-        <button class="btn btn-dark " >
-            <a class="text-decoration-none text-light fw-bold" asp-action="CreateStudentAttendence" asp-controller="Attendence">
-                Student
-            </a>
-        </button>
+       
+        
+
+            <div>
+                <button id="sbtn" class="btn btn-secondary">Student</button>
+
+                <br />
+                <div id="Result">
+                </div>
+
+
+            </div>
+           
+            
+       
     </div>   
+   
   
 </div>
 
+@section Scripts {
+
+    <script>
+        $("#sbtn").click(function () {
+            var btn= `
+
+                     <a class="text-decoration-none text-light fw-bold text-center" href="Attendence/CreateStudentAttendence">
+                             Full Course Attendance Summary
+                    </a>
+                    <br />
+                    <br />
+
+                      <a class="text-decoration-none text-light fw-bold text-center" href="Attendence/CreateStudentAttendence">
+                           Course Attendance Record
+                     </a>
+
+                        `;
+            $("#Result").append(btn);
+            $("#sbtn").remove();
+           
+        });
+
+
+
+
+
+    </script>
+}

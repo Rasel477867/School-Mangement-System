@@ -1,4 +1,5 @@
-﻿using SchoolMS.Core.Models;
+﻿using Microsoft.EntityFrameworkCore;
+using SchoolMS.Core.Models;
 using SchoolMS.Repository.Contacts;
 using SchoolMS.Repository.Core;
 using SchoolMS.Repository.Data;
@@ -30,6 +31,11 @@ namespace SchoolMS.Repository
             float present=_db.Attenants.Where(x=>x.SubjectId==SubjectId && x.StudentId==StudentId && x.IsPresent).Count();
             return ((present / total) * (100));
 
+        }
+
+        public async Task<List<Attendence>> GetAttendencesBySubject(int SubjectId, int StudentId)
+        {
+            return await _db.Attenants.Where(x=>x.SubjectId==SubjectId && x.StudentId==StudentId).ToListAsync();
         }
     }
 }

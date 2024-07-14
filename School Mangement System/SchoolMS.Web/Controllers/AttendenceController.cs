@@ -123,5 +123,31 @@ namespace SchoolMS.Web.Controllers
 
             return View(ListAttendenceStudentView);
         }
+        public async Task< IActionResult> GetSubjectAttendenceDetails(int  subjectid,int studentid) 
+        {
+
+            var SubjectAttendence=await _attendenceService.GetAttendencesBySubject(subjectid,studentid);
+            var SubjectDetails = new List<SubjectAttendenceView>();
+            SubjectDetails=SubjectAttendence.Select(x=>new SubjectAttendenceView
+            {
+                DateTime=x.Date,
+                Attendence=x.IsPresent
+            }).ToList();
+            var subject = await _subjectService.GetById(subjectid);
+            for(int i=0; i<SubjectDetails.Count(); i++)
+            {
+                SubjectDetails[i].Serial = i + 1;
+                SubjectDetails[i].SubjectName = subject.Name;
+            }
+            if(SubjectDetails.Count > 0)
+            {
+                return PartialView("_GetSubjectAttendenceDetails", SubjectDetails);
+            }
+            else
+            {
+                return null;
+            }
+        
+        }
     }
 }

@@ -29,7 +29,11 @@
                 </th>
                 <th>
                     @Html.DisplayNameFor(model => model.Attendence)
+                </th>  
+                <th>
+                    Details
                 </th>
+
 
             </tr>
         </thead>
@@ -63,14 +67,9 @@
                             <p>0.0%</p>
                         }
 
-
-
-
-
-
-
-
-
+                    </td>
+                    <td>
+                        <a class="btn btn-primary" href="javascript:void(0)" onclick="SubjectDetals('@item.SubjectId', '@item.StudentId')">Show Details</a>
                     </td>
 
                 </tr>
@@ -87,4 +86,38 @@ else
     <h3 class="text-center ">NO Subject Assigned this class</h3>
 }
 
+<div id="ParitalView">
+    
+</div>
 
+
+@section Scripts {
+    <script type="text/javascript">
+
+
+        function SubjectDetals(SubjectId, StudentId) {
+
+            $.ajax({
+                type: "POST",
+                url: "/Attendence/GetSubjectAttendenceDetails",
+                data: { subjectid: SubjectId, studentid: StudentId },
+
+                success: function (response) {
+
+                    $("#ParitalView").html(response);
+
+                },
+                error: function (response) {
+                    alert(response.message);
+                }
+            });
+
+
+
+        }
+        $(document).ready(() => {
+
+
+        });
+    </script>
+}

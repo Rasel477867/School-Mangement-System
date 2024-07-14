@@ -46,6 +46,10 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXR0ZW5kZW5jZVxTdHVkZW50QXR0ZW5kZW5jZVJlc3VsdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
+[D:/School mangement/School Mangement System/SchoolMS.Web/Views/Attendence/_GetSubjectAttendenceDetails.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXR0ZW5kZW5jZVxfR2V0U3ViamVjdEF0dGVuZGVuY2VEZXRhaWxzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [D:/School mangement/School Mangement System/SchoolMS.Web/Views/ClassLevel/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2xhc3NMZXZlbFxDcmVhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 

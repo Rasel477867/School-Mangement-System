@@ -29,5 +29,10 @@ namespace SchoolMS.Service
         {
             return _attendenceRepository.AttendenceCalculationBySubject(SubjectId, StudentId);
         }
+
+        public async Task<List<Attendence>> GetAttendencesBySubject(int SubjectId, int StudentId)
+        {
+            return await _attendenceRepository.GetAttendencesBySubject(SubjectId, StudentId);
+        }
     }
 }
