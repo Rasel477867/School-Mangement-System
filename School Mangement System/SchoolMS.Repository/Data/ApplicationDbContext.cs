@@ -26,7 +26,7 @@ namespace SchoolMS.Repository.Data
         public DbSet<Attendence> Attenants { get; set; }
         public DbSet<ClassLevel> ClassLevels { get; set; }
         public DbSet<Designation> Designations { get; set; }
-        public DbSet<ResultSheet> ResultsSheets { get; set; }
+        public DbSet<Resultsheet> ResultsSheets { get; set; }
 
     }
 }

@@ -55,6 +55,7 @@ namespace SchoolMS.Web
             builder.Services.AddScoped<IStudentRepository, StudentRepository>();
             builder.Services.AddScoped<ISubjectRepository, SubjectRepository>();
             builder.Services.AddScoped<IAttendenceRepository, AttendenceRepository>();
+            builder.Services.AddScoped<IResultsheetRepository, ResultsheetRepository>();
 
             builder.Services.AddScoped<ITeacherService,TeacherService>();
             builder.Services.AddScoped<IDesignationService, DesignationService>();
@@ -62,7 +63,7 @@ namespace SchoolMS.Web
             builder.Services.AddScoped<IStudentService, StudentService>();
             builder.Services.AddScoped<ISubjectService, SubjectService>();
             builder.Services.AddScoped<IAttendenceService, AttendenceService>();
-
+            builder.Services.AddScoped<IResultsheetService, ResultsheetService>();
        
 
 

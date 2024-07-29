@@ -12,15 +12,15 @@ using SchoolMS.Repository.Data;
 namespace SchoolMS.Repository.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20240707040131_Attendence")]
-    partial class Attendence
+    [Migration("20240726043819_Test")]
+    partial class Test
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
-                .HasAnnotation("ProductVersion", "8.0.5")
+                .HasAnnotation("ProductVersion", "8.0.7")
                 .HasAnnotation("Relational:MaxIdentifierLength", 128);
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
@@ -300,7 +300,7 @@ namespace SchoolMS.Repository.Migrations
                     b.ToTable("Designations");
                 });
 
-            modelBuilder.Entity("SchoolMS.Core.Models.ResultSheet", b =>
+            modelBuilder.Entity("SchoolMS.Core.Models.Resultsheet", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -324,19 +324,15 @@ namespace SchoolMS.Repository.Migrations
                         .HasColumnType("int");
 
                     b.Property<string>("Term")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
 
-                    b.HasIndex("ClassId")
-                        .IsUnique();
+                    b.HasIndex("ClassId");
 
-                    b.HasIndex("StudentId")
-                        .IsUnique();
+                    b.HasIndex("StudentId");
 
-                    b.HasIndex("SubjectId")
-                        .IsUnique();
+                    b.HasIndex("SubjectId");
 
                     b.ToTable("ResultsSheets");
                 });
@@ -534,23 +530,23 @@ namespace SchoolMS.Repository.Migrations
                     b.Navigation("Subject");
                 });
 
-            modelBuilder.Entity("SchoolMS.Core.Models.ResultSheet", b =>
+            modelBuilder.Entity("SchoolMS.Core.Models.Resultsheet", b =>
                 {
                     b.HasOne("SchoolMS.Core.Models.ClassLevel", "ClassLevel")
-                        .WithOne("ResultSheet")
-                        .HasForeignKey("SchoolMS.Core.Models.ResultSheet", "ClassId")
+                        .WithMany("ResultSheet")
+                        .HasForeignKey("ClassId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
                     b.HasOne("SchoolMS.Core.Models.Student", "Student")
-                        .WithOne("ResultSheet")
-                        .HasForeignKey("SchoolMS.Core.Models.ResultSheet", "StudentId")
+                        .WithMany("ResultSheet")
+                        .HasForeignKey("StudentId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
                     b.HasOne("SchoolMS.Core.Models.Subject", "Subject")
-                        .WithOne("ResultSheet")
-                        .HasForeignKey("SchoolMS.Core.Models.ResultSheet", "SubjectId")
+                        .WithMany("ResultSheet")
+                        .HasForeignKey("SubjectId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
@@ -608,8 +604,7 @@ namespace SchoolMS.Repository.Migrations
 
             modelBuilder.Entity("SchoolMS.Core.Models.ClassLevel", b =>
                 {
-                    b.Navigation("ResultSheet")
-                        .IsRequired();
+                    b.Navigation("ResultSheet");
 
                     b.Navigation("Students");
 
@@ -627,14 +622,12 @@ namespace SchoolMS.Repository.Migrations
                 {
                     b.Navigation("Attendences");
 
-                    b.Navigation("ResultSheet")
-                        .IsRequired();
+                    b.Navigation("ResultSheet");
                 });
 
             modelBuilder.Entity("SchoolMS.Core.Models.Subject", b =>
                 {
-                    b.Navigation("ResultSheet")
-                        .IsRequired();
+                    b.Navigation("ResultSheet");
 
                     b.Navigation("Subjects");
                 });

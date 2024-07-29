@@ -15,6 +15,6 @@ namespace SchoolMS.Core.Models
         public List<Subject>Subjects { get; set; }
         public List<Student> Students { get; set; }
        
-        public ResultSheet ResultSheet { get; set; }
+        public List<Resultsheet> ResultSheet { get; set; }
     }
 }

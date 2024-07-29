@@ -1,0 +1,75 @@
+﻿@model IEnumerable<SchoolMS.Web.ViewModels.ResultView>
+
+@{
+    ViewData["Title"] = "ShowResult";
+}
+@{
+    var firstStudent = Model.FirstOrDefault();
+}
+
+@if (firstStudent != null)
+{
+    <div>
+        <h3 class="text-center"> Class Name: @firstStudent.ClassName</h3>
+        <h3 class="text-center"> Student Name: @firstStudent.StudentName</h3>
+        <h4 class="text-center"> Student Id : @firstStudent.StudentId</h4>
+    </div>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.Serial)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.SubjectId)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.SubjectName)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Marks)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Grade)
+                </th>
+           
+
+
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Serial)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.SubjectId)
+                    </td>
+
+                    <td>
+                        @Html.DisplayFor(modelItem => item.SubjectName)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Marks)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Grade)
+                    </td>
+                    
+
+                </tr>
+            }
+        </tbody>
+    </table>
+
+}
+else
+{
+
+    <br />
+    <br />
+    <h3 class="text-center ">NO Marks Assigned </h3>
+}

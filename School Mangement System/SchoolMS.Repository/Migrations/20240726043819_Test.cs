@@ -220,6 +220,7 @@ namespace SchoolMS.Repository.Migrations
                     Name = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Code = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     ClassId = table.Column<int>(type: "int", nullable: false),
+                    SubjectId = table.Column<int>(type: "int", nullable: true),
                     IsDelete = table.Column<bool>(type: "bit", nullable: false)
                 },
                 constraints: table =>
@@ -231,6 +232,11 @@ namespace SchoolMS.Repository.Migrations
                         principalTable: "ClassLevels",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
+                    table.ForeignKey(
+                        name: "FK_Subjects_Subjects_SubjectId",
+                        column: x => x.SubjectId,
+                        principalTable: "Subjects",
+                        principalColumn: "Id");
                 });
 
             migrationBuilder.CreateTable(
@@ -275,6 +281,7 @@ namespace SchoolMS.Repository.Migrations
                     Date = table.Column<DateTime>(type: "datetime2", nullable: false),
                     IsPresent = table.Column<bool>(type: "bit", nullable: false),
                     StudentId = table.Column<int>(type: "int", nullable: false),
+                    SubjectId = table.Column<int>(type: "int", nullable: false),
                     IsDelete = table.Column<bool>(type: "bit", nullable: false)
                 },
                 constraints: table =>
@@ -286,6 +293,12 @@ namespace SchoolMS.Repository.Migrations
                         principalTable: "Students",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
+                    table.ForeignKey(
+                        name: "FK_Attenants_Subjects_SubjectId",
+                        column: x => x.SubjectId,
+                        principalTable: "Subjects",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.NoAction);
                 });
 
             migrationBuilder.CreateTable(
@@ -295,7 +308,7 @@ namespace SchoolMS.Repository.Migrations
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     Marks = table.Column<int>(type: "int", nullable: false),
-                    Term = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Term = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     SubjectId = table.Column<int>(type: "int", nullable: false),
                     StudentId = table.Column<int>(type: "int", nullable: false),
                     ClassId = table.Column<int>(type: "int", nullable: false),
@@ -315,7 +328,7 @@ namespace SchoolMS.Repository.Migrations
                         column: x => x.StudentId,
                         principalTable: "Students",
                         principalColumn: "Id",
-                        onDelete: ReferentialAction.NoAction);
+                        onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
                         name: "FK_ResultsSheets_Subjects_SubjectId",
                         column: x => x.SubjectId,
@@ -366,26 +379,27 @@ namespace SchoolMS.Repository.Migrations
             migrationBuilder.CreateIndex(
                 name: "IX_Attenants_StudentId",
                 table: "Attenants",
-                column: "StudentId",
-                unique: true);
+                column: "StudentId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Attenants_SubjectId",
+                table: "Attenants",
+                column: "SubjectId");
 
             migrationBuilder.CreateIndex(
                 name: "IX_ResultsSheets_ClassId",
                 table: "ResultsSheets",
-                column: "ClassId",
-                unique: true);
+                column: "ClassId");
 
             migrationBuilder.CreateIndex(
                 name: "IX_ResultsSheets_StudentId",
                 table: "ResultsSheets",
-                column: "StudentId",
-                unique: true);
+                column: "StudentId");
 
             migrationBuilder.CreateIndex(
                 name: "IX_ResultsSheets_SubjectId",
                 table: "ResultsSheets",
-                column: "SubjectId",
-                unique: true);
+                column: "SubjectId");
 
             migrationBuilder.CreateIndex(
                 name: "IX_Students_ClassId",
@@ -396,6 +410,11 @@ namespace SchoolMS.Repository.Migrations
                 name: "IX_Subjects_ClassId",
                 table: "Subjects",
                 column: "ClassId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Subjects_SubjectId",
+                table: "Subjects",
+                column: "SubjectId");
 
             migrationBuilder.CreateIndex(
                 name: "IX_Teachers_ClassId",

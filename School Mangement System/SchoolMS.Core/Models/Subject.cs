@@ -11,7 +11,7 @@ namespace SchoolMS.Core.Models
         [ForeignKey(nameof(ClassId))]
         public ClassLevel ClassLevel { get; set; }
    
-        public ResultSheet ResultSheet { get; set; }
-        public List<Subject> Subjects { get; set;}
+        public List<Resultsheet> ?ResultSheet { get; set; }
+        public List<Subject> ?Subjects { get; set;}
     }
 }
