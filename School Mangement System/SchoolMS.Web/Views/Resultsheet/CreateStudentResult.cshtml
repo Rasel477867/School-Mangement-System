@@ -46,48 +46,60 @@
 
 
 @section Scripts {
-
+   
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.8.7/chosen.min.css" rel="stylesheet" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.8.7/chosen.jquery.min.js"></script>
     <script>
-        // console.log($("#DepartmentId"));
-        $("#ClassId").change(function () {
-            var ClassId = $("#ClassId").val();
-            //console.log(departmentId);
 
 
-            $('#StudentId').empty();
+        $(document).ready(function () {
+            $("#ClassId").chosen();
+
+            $("#ClassId").change(function () {
+                var ClassId = $("#ClassId").val();
+                //console.log(departmentId);
 
 
-            $.ajax({
-                type: "POST",
-                url: "/Attendence/GetStudent",
-                data: { id: ClassId },
-
-                success: function (response) {
-
-                    var sut = response;
-                    var option = "<option value=''> Select </option>";
-                    $("#StudentId").append(option);
-                    $.each(sut, function (key, student) {
+                $('#StudentId').empty();
 
 
-                        var option = "<option value='" + student.id + "'>" + student.name + "</option>";
+                $.ajax({
+                    type: "POST",
+                    url: "/Attendence/GetStudent",
+                    data: { id: ClassId },
 
+                    success: function (response) {
+
+                        var sut = response;
+                        var option = "<option value=''> Select </option>";
+                        $("#StudentId").append(option);
+                        $.each(sut, function (key, student) {
+
+
+                            var option = "<option value='" + student.id + "'>" + student.name + "</option>";
+
+                            $('#StudentId').append(option);
+
+                        });
+
+                    },
+                    error: function (response) {
+                        var option = "<option value=''> Select </option>";
                         $('#StudentId').append(option);
+                        alert(response.message);
+                    }
+                });
 
-                    });
 
-                },
-                error: function (response) {
-                    var option = "<option value=''> Select </option>";
-                    $('#StudentId').append(option);
-                    alert(response.message);
-                }
+
             });
 
 
-
+            $("#StudentId").chosen();
         });
 
+
+   
 
 
 
