@@ -1,4 +1,5 @@
-﻿@model SchoolMS.Web.ViewModels.ClassStudentView
+﻿﻿
+ @model SchoolMS.Web.ViewModels.ClassStudentView
 
 @{
     ViewData["Title"] = "CreateStudentAttendence";
@@ -47,13 +48,12 @@
 
 @section Scripts {
    
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.8.7/chosen.min.css" rel="stylesheet" />
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.8.7/chosen.jquery.min.js"></script>
+   
     <script>
 
 
         $(document).ready(function () {
-            $("#ClassId").chosen();
+         
 
             $("#ClassId").change(function () {
                 var ClassId = $("#ClassId").val();
@@ -77,6 +77,7 @@
 
 
                             var option = "<option value='" + student.id + "'>" + student.name + "</option>";
+                            console.log(option);
 
                             $('#StudentId').append(option);
 
@@ -95,7 +96,7 @@
             });
 
 
-            $("#StudentId").chosen();
+       
         });
 
 
@@ -105,4 +106,5 @@
 
 
     </script>
-}
+} 
+
